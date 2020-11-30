@@ -3,44 +3,48 @@ package net.ranzer.aoc.y2015.day06;
 import net.ranzer.aoc.framework.Day;
 import net.ranzer.aoc.framework.Input;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Day06 extends Day {
 
+	Light[][] grid = new Light[1000][1000];
+	private final List<String> instructions = new ArrayList<>();
+
 	public Day06() {
 		input = Input.getScanner(2015,6);
-	}
 
-	Light[][] grid = new Light[1000][1000];
-	
-	public static void main(String[] args) throws FileNotFoundException {
-	
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[i].length; j++) {
 				grid[i][j]=new Light();
 			}
 		}
+
+		while(input.hasNext()){
+			instructions.add(input.nextLine());
+		}
+		input.close();
+	}
+
+	@Override
+	public void part1() {
+
 		StringBuilder cmdPtnBffer = new StringBuilder();
 		for (Command command : Command.values()) {
 			cmdPtnBffer.append(String.format("|(?<%s>%s)", command.name(), command.pattern));
 		}
 		Pattern cmdPatterns = Pattern.compile(cmdPtnBffer.substring(1));
 		Pattern rectPattern = Pattern.compile("(?<x1>\\d+),(?<y1>\\d+) through (?<x2>\\d+),(?<y2>\\d+)");
-		Scanner read = new Scanner(input);
 		
-		while (read.hasNextLine()){
-			String instruction = read.nextLine();
+		for (String instruction : instructions){
 			Command cmd = null;
 			Matcher cmdMatch = cmdPatterns.matcher(instruction);
-			cmdMatch.find();
-			findcmd: for (Command command : Command.values()) {
+			cmdMatch.find(); for (Command command : Command.values()) {
 				if(cmdMatch.group(command.name())!=null){
 					cmd = command;
-					break findcmd;
+					break;
 				}
 			}
 			
@@ -58,40 +62,52 @@ public class Day06 extends Day {
 		
 		
 		int count=0;
-		for (int i = 0; i < grid.length; i++) {
-			for (int j = 0; j < grid[i].length; j++) {
-				count+=grid[i][j].getLit();
-			}			
-		}
-		System.out.println(count);
-		read.close();
-	}
-	
-	private static void processInstruction(Command cmd, Rect rect) {
-		
-		for (int i = 0; i < grid.length; i++) {
-			for (int j = 0; j < grid[i].length; j++) {
-				if(i>=rect.Y1&&i<=rect.Y2&&j>=rect.X1&&j<=rect.X2){
-					switch (cmd){
-					case ON:
-						grid[i][j].turnOn();
-						break;
-					case OFF:
-						grid[i][j].turnOff();
-						break;
-					case TOGGLE:
-						grid[i][j].toggle();
-						break;
-					}
-				}
+		for (Light[] lights : grid) {
+			for (Light light : lights) {
+				count += light.getLit();
 			}
 		}
-		
+		System.out.println(count);
 	}
+	
+	private void processInstruction(Command cmd, Rect rect) {
 
-	@Override
-	public void part1() {
+		for (int y = rect.Y1; y < rect.Y2; y++) {
+			for (int x = rect.X1; x < rect.X2; x++) {
+				switch (cmd){
+					case ON:
+						grid[x][y].turnOn();
+						break;
+					case OFF:
+						grid[x][y].turnOff();
+						break;
+					case TOGGLE:
+						grid[x][y].toggle();
+						break;
+				}
+			}
 
+		}
+		//WHY IN THE **HELL** DID I THINK THIS WAS A GOOD IDEA!
+		//I SHAVED OFF 320 MILLISECONDS BY DOING IT THE ABOVE WAY!
+//		for (int i = 0; i < grid.length; i++) {
+//			for (int j = 0; j < grid[i].length; j++) {
+//				if(i>=rect.Y1&&i<=rect.Y2&&j>=rect.X1&&j<=rect.X2){
+//					switch (cmd){
+//					case ON:
+//						grid[i][j].turnOn();
+//						break;
+//					case OFF:
+//						grid[i][j].turnOff();
+//						break;
+//					case TOGGLE:
+//						grid[i][j].toggle();
+//						break;
+//					}
+//				}
+//			}
+//		}
+		
 	}
 
 	@Override
@@ -111,5 +127,15 @@ public class Day06 extends Day {
 		public void turnOn(){lit+=1;}
 		public void turnOff() {lit=Math.max(0, lit-1);}
 		public void toggle(){lit+=2;}
+	}
+
+	public enum Command {
+
+		ON("^turn on"), OFF("^turn off"), TOGGLE("^toggle");
+		public String pattern;
+
+		Command(String pattern){
+			this.pattern=pattern;
+		}
 	}
 }
