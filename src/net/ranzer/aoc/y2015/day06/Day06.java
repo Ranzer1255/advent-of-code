@@ -1,4 +1,7 @@
-package y2015.day06;
+package net.ranzer.aoc.y2015.day06;
+
+import net.ranzer.aoc.framework.Day;
+import net.ranzer.aoc.framework.Input;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,10 +9,13 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day6 {
-	
-	static File input = new File("./src/y2015/day06/day6input");
-	static Light[][] grid = new Light[1000][1000];
+public class Day06 extends Day {
+
+	public Day06() {
+		input = Input.getScanner(2015,6);
+	}
+
+	Light[][] grid = new Light[1000][1000];
 	
 	public static void main(String[] args) throws FileNotFoundException {
 	
@@ -81,6 +87,16 @@ public class Day6 {
 			}
 		}
 		
+	}
+
+	@Override
+	public void part1() {
+
+	}
+
+	@Override
+	public void part2() {
+
 	}
 
 	static class Rect{

@@ -1,6 +1,7 @@
 package net.ranzer.aoc.y2015.day04;
 
 import net.ranzer.aoc.framework.Day;
+import net.ranzer.common.Hex;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
@@ -44,7 +45,7 @@ public class Day04 extends Day {
 			System.out.println("try number: "+tryIndex);
 			md.update(test.getBytes(StandardCharsets.UTF_8));
 			byte[] hash = md.digest();
-			System.out.println(bytesToHex(hash));
+			System.out.println(Hex.bytesToHex(hash));
 			found=foundHash(hash,5);
 		}
 		System.out.println(tryIndex);
@@ -72,14 +73,4 @@ public class Day04 extends Day {
 		System.out.println(tryIndex);
 	}
 
-	private static final byte[] HEX_ARRAY = "0123456789ABCDEF".getBytes(StandardCharsets.US_ASCII);
-	public static String bytesToHex(byte[] bytes) {
-		byte[] hexChars = new byte[bytes.length * 2];
-		for (int j = 0; j < bytes.length; j++) {
-			int v = bytes[j] & 0xFF;
-			hexChars[j * 2] = HEX_ARRAY[v >>> 4];
-			hexChars[j * 2 + 1] = HEX_ARRAY[v & 0x0F];
-		}
-		return new String(hexChars, StandardCharsets.UTF_8);
-	}
 }

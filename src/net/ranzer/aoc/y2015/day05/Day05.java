@@ -6,6 +6,8 @@ import net.ranzer.aoc.framework.Input;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class Day05 extends Day {
@@ -68,14 +70,20 @@ public class Day05 extends Day {
 	public void part2() {
 		List<String> p2list = new ArrayList<>(list);
 
-		//find double pair
-//		p2list = p2list.stream().filter(s -> {
-//
-//			}
-//		).collect(Collectors.toList());
 
-		//find zyz match
+		p2list = p2list.stream().filter(Day05::nicePart2
+		).collect(Collectors.toList());
 
+		p2list.forEach(System.out::println);
 		//output
+		System.out.println(p2list.size());
+	}
+
+	private static boolean nicePart2(String string) {
+		Pattern letterPairs = Pattern.compile("(.{2}).*\\1");
+		Pattern letterSamich = Pattern.compile("(.).\\1");
+		Matcher pair = letterPairs.matcher(string);
+		Matcher samich = letterSamich.matcher(string);
+		return (pair.find()&&samich.find());
 	}
 }

@@ -1,4 +1,4 @@
-package y2015.day06;
+package net.ranzer.aoc.y2015.day06;
 
 public enum Command {
 
