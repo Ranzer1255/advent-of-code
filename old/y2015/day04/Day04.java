@@ -1,4 +1,4 @@
-package y2015.day04;
+package old.y2015.day04;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

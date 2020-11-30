@@ -64,7 +64,7 @@ public class Day3 {
     private static void printOut(int[][] fabric) {
         for (int i = 0 ; i < fabric.length; i++) {
             for (int j = 0; j < fabric[i].length; j++) {
-                System.out.print(fabric[i][j]==0?".":fabric[i][j]);
+                System.out.print(fabric[i][j]==0? "" :fabric[i][j]);
             }
             System.out.println();
         }

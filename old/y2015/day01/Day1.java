@@ -1,4 +1,4 @@
-package y2015.day01;
+package old.y2015.day01;
 
 import java.io.File;
 import java.io.FileNotFoundException;
