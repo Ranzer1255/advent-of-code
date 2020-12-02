@@ -3,7 +3,6 @@ package net.ranzer.aoc.y2020.day02;
 import net.ranzer.aoc.framework.Day;
 import net.ranzer.aoc.framework.Input;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -29,7 +28,7 @@ public class Day02 extends Day {
 
 				String pass = m.group("password");
 
-				passwords.add(new Password(low,high,rule,pass));
+				passwords.add(new Password(low, high, rule, pass));
 			}
 		}
 
@@ -58,7 +57,7 @@ public class Day02 extends Day {
 
 	}
 
-	private class Password{
+	private static class Password{
 
 		String password;
 		Rule rule;
@@ -66,7 +65,7 @@ public class Day02 extends Day {
 
 		public Password(int low, int high, char rule, String password) {
 
-			this.rule = new Rule(low,high,rule);
+			this.rule = new Rule(low, high, rule);
 			this.password = password;
 
 		}
@@ -88,7 +87,7 @@ public class Day02 extends Day {
 			} else return password.charAt(rule.high-1) == rule.rule && password.charAt(rule.low-1) != rule.rule;
 		}
 
-		private class Rule{
+		private static class Rule{
 
 			int low,high;
 			char rule;
