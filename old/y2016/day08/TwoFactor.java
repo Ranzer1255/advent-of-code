@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class TwoFactor {
 	
-	static File input = new File("C:/Users/jrdillingham.MABANKISD/Programing/workspace/adventofcode/src/y2016/day08/input.txt");
+	static File input = new File("C:/Users/jrdillingham.MABANKISD/Programing/workspace/adventofcode/src/y2016/day08/input");
 //	static String input = "rect 3x2\n"
 //			+ "rotate column x=1 by 1\n"
 //			+ "rotate row y=0 by 4\n"

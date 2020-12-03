@@ -5,7 +5,7 @@ import y2019.common.IntcodeComputer;
 import java.io.File;
 
 class RepairBotProcessor {
-	private static File program =  new File("./src/y2019/day15/input.txt");
+	private static File program =  new File("./src/y2019/day15/input");
 
 	private IntcodeComputer ic = new IntcodeComputer(program);
 

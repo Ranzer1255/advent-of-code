@@ -106,7 +106,7 @@ public class Day10 {
     private static List<Light> parseInput() throws FileNotFoundException {
         List<Light> rtn = new ArrayList<>();
 
-        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day10/input.txt"));
+        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day10/input"));
 //        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day10/testInput.txt"));
 
         Pattern p = Pattern.compile("-*\\d+");

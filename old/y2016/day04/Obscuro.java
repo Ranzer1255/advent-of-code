@@ -12,7 +12,7 @@ public class Obscuro {
 	
 	public static final String regex = "(?<name>([a-z]+\\-)+)(?<id>\\d+)\\[(?<check>[a-z]+)\\]";
 	public static final Pattern room = Pattern.compile(regex);
-	static final File input = new File("C:/Users/jrdillingham.MABANKISD/Programing/workspace/adventofcode/src/y2016/day04/input.txt");
+	static final File input = new File("C:/Users/jrdillingham.MABANKISD/Programing/workspace/adventofcode/src/y2016/day04/input");
 	
 //	static final String input = "qzmt-zixmtkozy-ivhz-343[zimth]";
 	

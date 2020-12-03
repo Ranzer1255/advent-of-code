@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class Repeater {
 
-	static File input = new File("C:/Users/sgman/programing/java/workspace/adventOfCode2017/src/y2016/day06/input.txt");
+	static File input = new File("C:/Users/sgman/programing/java/workspace/adventOfCode2017/src/y2016/day06/input");
 	
 	/*static String input = "eedadn\n"+
 						  "drvtee\n"+

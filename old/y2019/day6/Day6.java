@@ -8,7 +8,7 @@ public class Day6 {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		Map<String,Body> bodies = new HashMap<>();
-		Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2019/day6/input.txt"));
+		Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2019/day6/input"));
 
 		while (input.hasNext()){
 			String[] in = input.next().split("\\)");

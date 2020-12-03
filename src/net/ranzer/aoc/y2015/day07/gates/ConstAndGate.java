@@ -1,6 +1,6 @@
-package y2015.day07.gates;
+package net.ranzer.aoc.y2015.day07.gates;
 
-import y2015.day07.Wire;
+import net.ranzer.aoc.y2015.day07.Wire;
 
 public class ConstAndGate extends Gate {
 

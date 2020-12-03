@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 public class Day2 {
 	public static void main(String[] args) throws FileNotFoundException {
 		IntcodeComputer ic = new IntcodeComputer();
-//		IntcodeComputer.setProgram("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2019/day2/input.txt");
+//		IntcodeComputer.setProgram("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2019/day2/input");
 //		//part 1
 //		System.out.println("part 1: "+IntcodeComputer.run(12,2));
 //

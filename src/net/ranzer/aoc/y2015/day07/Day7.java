@@ -1,6 +1,6 @@
-package y2015.day07;
+package net.ranzer.aoc.y2015.day07;
 
-import y2015.day07.gates.*;
+import net.ranzer.aoc.y2015.day07.gates.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,30 +12,22 @@ import java.util.regex.Pattern;
 
 public class Day7 {
 
-	static File input = new File("./src/y2015/day07/input.txt");
-//	private static File testInput = new File("./src/y2015/day07/testInput.txt");
+	private static final File inputFile = new File("./src/net/ranzer/aoc/y2015/day07/input");
+	private static final File testInput = new File("./src/net/ranzer/aoc/y2015/day07/testInput.txt");
 
-	private static Map<String, Wire> wires = new HashMap<>();
+	private static final Map<String, Wire> wires = new HashMap<>();
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		String inputRegex = "^(?<input>\\d+) -> (?<o>[a-z]+)$";
-		Pattern in = Pattern.compile(inputRegex);
-		String straightRegex = "^(?<input>[a-z]+) -> (?<o>[a-z]+)$";
-		Pattern straight = Pattern.compile(straightRegex);
-		String notRegex = "^NOT (?<a>[a-z]+) -> (?<o>[a-z]+)$";
-		Pattern not = Pattern.compile(notRegex);
-		String andRegex = "^(?:(?<n>\\d+)|(?<a>[a-z]+)) AND (?<b>[a-z]+) -> (?<o>[a-z]+)$";
-		Pattern and = Pattern.compile(andRegex);
-		String orRegex = "^(?<a>[a-z]+) OR (?<b>[a-z]+) -> (?<o>[a-z]+)$";
-		Pattern or = Pattern.compile(orRegex);
-		String lShiftRegex = "^(?<a>[a-z]+) LSHIFT (?<n>\\d+) -> (?<o>[a-z]+)$";
-		Pattern ls = Pattern.compile(lShiftRegex);
-		String rShiftRegex = "^(?<a>[a-z]+) RSHIFT (?<n>\\d+) -> (?<o>[a-z]+)$";
-		Pattern rs = Pattern.compile(rShiftRegex);
+		Pattern in       = Pattern.compile(GateType.INPUT.REGEX);
+		Pattern straight = Pattern.compile(GateType.STRAIGHT.REGEX);
+		Pattern not      = Pattern.compile(GateType.NOT.REGEX);
+		Pattern and 	 = Pattern.compile(GateType.AND.REGEX);
+		Pattern or 		 = Pattern.compile(GateType.OR.REGEX);
+		Pattern ls  	 = Pattern.compile(GateType.LSHIFT.REGEX);
+		Pattern rs 		 = Pattern.compile(GateType.RSHIFT.REGEX);
 
-
-		Scanner input = new Scanner(Day7.input);
+		Scanner input = new Scanner(inputFile);
 		Map<Wire,Integer> inputs = new HashMap<>();
 
 		while (input.hasNext()){
@@ -53,6 +45,7 @@ public class Day7 {
 				Wire wireO = getWire(o);
 
 				wireO.setValue(stringIn);
+				wireO.setActiveSignal(true);
 
 				continue;
 
@@ -104,6 +97,7 @@ public class Day7 {
 
 					wireA = new Wire("one");
 					wireA.setValue(Integer.parseInt(andMatcher.group("n")));
+					wireA.setActiveSignal(true);
 //					new ConstAndGate(wireB,wireO);
 				} else {
 
@@ -160,13 +154,9 @@ public class Day7 {
 				new RShiftGate(wireA, n, wireO);
 			}
 		}
-
-//		System.out.println(wires.get("a"));
-		for (Wire w :
-				wires.values()) {
-			System.out.println(w);
-		}
-
+		int aValue = wires.get("a").getValue();
+		wires.get("b").setValue(aValue);
+		System.out.println(wires.get("a"));
 	}
 
 	private static Wire getWire(String wire) {

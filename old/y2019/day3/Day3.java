@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Day3 {
 	public static void main(String[] args) throws FileNotFoundException {
 
-		File program = new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2019/day3/input.txt");
+		File program = new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2019/day3/input");
 		IntcodeComputer ic = new IntcodeComputer(program);
 
 		ic.run();

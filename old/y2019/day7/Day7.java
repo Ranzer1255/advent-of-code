@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 
 public class Day7 {
 	public static void main(String[] args) throws FileNotFoundException {
-		File acs = new File("./src/y2019/day9/input.txt");
+		File acs = new File("./src/y2019/day9/input");
 
 		IntcodeComputer ampA = new IntcodeComputer(acs);
 		IntcodeComputer ampB = new IntcodeComputer(acs);

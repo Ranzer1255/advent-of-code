@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Day1 {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day1/input.txt"));
+        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day1/input"));
 
         List<Integer> freqs = new ArrayList<>();
         List<Integer> freqChanges = new ArrayList<>();

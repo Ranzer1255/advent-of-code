@@ -10,7 +10,7 @@ public class Day2 {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day2/input.txt"));
+        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day2/input"));
         List<String> labels = new ArrayList<>();
         List<String> twos = new ArrayList<>();
         List<String> threes = new ArrayList<>();

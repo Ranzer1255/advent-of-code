@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Day8 {
 	public static void main(String[] args) throws FileNotFoundException {
 		List<Layer> layers = new ArrayList<>();
-		Scanner input = new Scanner(new File("./src/y2019/day8/input.txt"));
+		Scanner input = new Scanner(new File("./src/y2019/day8/input"));
 		String in = input.nextLine();
 		for (int i = 0; i < in.length(); i=i+(Layer.WIDTH*Layer.HEIGHT)) {
 			int layerNumber = i/(Layer.HEIGHT *Layer.WIDTH);

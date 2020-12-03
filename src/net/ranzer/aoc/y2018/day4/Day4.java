@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Day4 {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day4/input.txt"));
+        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day4/input"));
         Scanner testInput = new Scanner("[1518-11-01 00:00] Guard #10 begins shift\n" +
                                         "[1518-11-01 00:05] falls asleep\n" +
                                         "[1518-11-01 00:25] wakes up\n" +

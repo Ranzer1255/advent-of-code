@@ -1,6 +1,6 @@
-package y2015.day07.gates;
+package net.ranzer.aoc.y2015.day07.gates;
 
-import y2015.day07.Wire;
+import net.ranzer.aoc.y2015.day07.Wire;
 
 public class NotGate extends Gate {
 	Wire a;
@@ -16,8 +16,13 @@ public class NotGate extends Gate {
 
 	@Override
 	public void update() {
-		o.setValue(~a.getValue());
-		System.out.println(this);
+		if(a.hasActiveSignal()) {
+			o.setValue(~a.getValue());
+			System.out.println(this);
+			o.setActiveSignal(true);
+		} else {
+			o.setActiveSignal(false);
+		}
 	}
 
 	@Override

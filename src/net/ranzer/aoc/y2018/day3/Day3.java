@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 public class Day3 {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day3/input.txt"));
+        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day3/input"));
         String[] testInput = {
                 "#1 @ 1,3: 4x4",
                 "#2 @ 3,1: 4x4",

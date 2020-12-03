@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ipv7 {
-	static File input = new File("C:/Users/sgman/programing/java/workspace/adventOfCode2017/src/y2016/day07/input.txt");
+	static File input = new File("C:/Users/sgman/programing/java/workspace/adventOfCode2017/src/y2016/day07/input");
 	
 //	static String input = "abba[mnop]qrst\n"
 //			+ "abcd[bddb]xyyx\n"

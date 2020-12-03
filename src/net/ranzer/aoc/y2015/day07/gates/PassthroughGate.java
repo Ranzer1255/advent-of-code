@@ -1,6 +1,6 @@
-package y2015.day07.gates;
+package net.ranzer.aoc.y2015.day07.gates;
 
-import y2015.day07.Wire;
+import net.ranzer.aoc.y2015.day07.Wire;
 
 public class PassthroughGate extends Gate {
 
@@ -15,8 +15,13 @@ public class PassthroughGate extends Gate {
 
 	@Override
 	public void update() {
-		o.setValue(a.getValue());
-		System.out.println(this);
+		if(a.hasActiveSignal()) {
+			o.setValue(a.getValue());
+			o.setActiveSignal(true);
+			System.out.println(this);
+		} else {
+			o.setActiveSignal(false);
+		}
 	}
 
 	@Override

@@ -41,7 +41,8 @@ public class Day06 extends Day {
 		for (String instruction : instructions){
 			Command cmd = null;
 			Matcher cmdMatch = cmdPatterns.matcher(instruction);
-			cmdMatch.find(); for (Command command : Command.values()) {
+			cmdMatch.find();
+			for (Command command : Command.values()) {
 				if(cmdMatch.group(command.name())!=null){
 					cmd = command;
 					break;

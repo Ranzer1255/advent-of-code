@@ -7,7 +7,7 @@ import java.util.*;
 public class Day7 {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day7/input.txt"));
+        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day7/input"));
 //        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day7/testInput.txt"));
 
         int numWorkers = 5;

@@ -9,7 +9,7 @@ import java.util.Stack;
 
 public class Day1 {
 	public static void main(String[] args) throws FileNotFoundException {
-		Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2019/day1/input.txt"));
+		Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2019/day1/input"));
 
 		Stack<Integer> moduleMasses = new Stack<>();
 		while  (input.hasNextInt()){

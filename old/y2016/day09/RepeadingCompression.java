@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class RepeadingCompression {
 	
-	static File input = new File("C:/Users/jrdillingham.MABANKISD/Programing/workspace/adventofcode/src/y2016/day09/input.txt");
+	static File input = new File("C:/Users/jrdillingham.MABANKISD/Programing/workspace/adventofcode/src/y2016/day09/input");
 //	static String input = "(3x3)xyz";
 	static Pattern repeat = Pattern.compile("\\((\\d+)x(\\d+)\\)");
 

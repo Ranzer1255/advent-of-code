@@ -1,6 +1,6 @@
-package y2015.day07.gates;
+package net.ranzer.aoc.y2015.day07.gates;
 
-import y2015.day07.Wire;
+import net.ranzer.aoc.y2015.day07.Wire;
 
 public class AndGate extends Gate {
 
@@ -13,18 +13,17 @@ public class AndGate extends Gate {
 		this.a.attachGate(this);
 		this.b = b;
 		this.b.attachGate(this);
+		update();
 	}
 
 	@Override
 	public void update() {
-		if((a.getValue()==0 || b.getValue() == 0)&&o.getValue()!=0){ //output 0 until both read more than
-			o.setValue(0);
-		} else if (a.getValue()==0||b.getValue()==0) {//do nothing
-
-		} else {
+		if (a.hasActiveSignal()&&b.hasActiveSignal()){
 			int output = a.getValue() & b.getValue();
 			o.setValue(output);
-			System.out.println(this);
+			o.setActiveSignal(true);
+		} else {
+			o.setActiveSignal(false);
 		}
 	}
 

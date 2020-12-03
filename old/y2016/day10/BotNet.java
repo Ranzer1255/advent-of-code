@@ -4,7 +4,7 @@ import java.io.File;
 
 public class BotNet {
 
-	static File input = new File("C:/Users/jrdillingham.MABANKISD/Programing/workspace/adventofcode/src/y2016/day10/input.txt");
+	static File input = new File("C:/Users/jrdillingham.MABANKISD/Programing/workspace/adventofcode/src/y2016/day10/input");
 	
 	public static void main(String[] args) {
 		

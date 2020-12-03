@@ -17,7 +17,7 @@ public class Day6 {//not my code sadly i was stumped
 
     public Day6() throws FileNotFoundException {
         //* Toggle comment - switch start of this line between /* and //* to toggle which section of code is active.
-        Scanner file = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day6/input.txt"));
+        Scanner file = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day6/input"));
 
         ArrayList<String> input = new ArrayList<>();
         while(file.hasNext()){
