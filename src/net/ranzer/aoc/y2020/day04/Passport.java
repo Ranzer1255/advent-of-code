@@ -2,6 +2,7 @@ package net.ranzer.aoc.y2020.day04;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class Passport {
 
@@ -36,20 +37,17 @@ public class Passport {
 
 	private Boolean byrValid() {
 		if(data.get(Key.BYR)==null) return false;
-		int year = Integer.parseInt(data.get(Key.BYR));
-		return inRange(year,1920,2002);
+		return inRange(Integer.parseInt(data.get(Key.BYR)),1920,2002);
 	}
 
 	private boolean iyrValid(){
 		if(data.get(Key.IYR)==null) return false;
-		int year = Integer.parseInt(data.get(Key.IYR));
-		return inRange(year,2010,2020);
+		return inRange(Integer.parseInt(data.get(Key.IYR)),2010,2020);
 	}
 
 	private boolean eyrValid(){
 		if(data.get(Key.EYR)==null) return false;
-		int year = Integer.parseInt(data.get(Key.EYR));
-		return  inRange(year,2020,2030);
+		return  inRange(Integer.parseInt(data.get(Key.EYR)),2020,2030);
 	}
 
 	private boolean hgtValid(){
@@ -70,8 +68,7 @@ public class Passport {
 	}
 
 	private boolean hclValid(){
-
-		return false;//TODO need to finsih this one
+		return regexVerification(Pattern.compile("^#[0-9a-f]{6}$"), this.data.get(Key.HCL));
 	}
 
 	private boolean eclValid(){
@@ -86,7 +83,8 @@ public class Passport {
 	}
 
 	private boolean pidValid(){
-		return false; //TODO need to finish this one
+		return regexVerification(Pattern.compile("^\\d{9}$"), this.data.get(Key.PID));
+
 	}
 
 	private boolean cidValid(){
@@ -96,6 +94,11 @@ public class Passport {
 
 	private Boolean inRange(int test, int low, int high) {
 		return (low <= test) && (test <= high);
+	}
+
+	private boolean regexVerification(Pattern pattern, String data) {
+		if (data == null) return false;
+		return pattern.matcher(data).matches();
 	}
 
 	public void addData(Key key, String value){
