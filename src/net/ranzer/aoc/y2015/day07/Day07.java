@@ -10,7 +10,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day7 {
+public class Day07 {
 
 	private static final File inputFile = new File("./src/net/ranzer/aoc/y2015/day07/input");
 	private static final File testInput = new File("./src/net/ranzer/aoc/y2015/day07/testInput.txt");
