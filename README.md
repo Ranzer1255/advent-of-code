@@ -1,1 +1,10 @@
-advent-of-code
+# Ranzer's Attempts at the [Advent of Code](https://Adventofcode.com)
+
+|Years|
+|:---:|
+|[2015](src/net/ranzer/aoc/y2015)|
+|[2016](src/net/ranzer/aoc/y2016)|
+|[2017](old/y2017) (needs refactored into new style)|
+|[2018](src/net/ranzer/aoc/y2018)|
+|[2019](old/y2019) (needs refactored into new style)|
+|[2020](src/net/ranzer/aoc/y2020)|
