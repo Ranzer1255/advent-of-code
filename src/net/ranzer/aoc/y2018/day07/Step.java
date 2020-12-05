@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day7;
+package net.ranzer.aoc.y2018.day07;
 
 import java.util.ArrayList;
 import java.util.List;

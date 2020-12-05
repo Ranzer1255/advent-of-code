@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day4;
+package net.ranzer.aoc.y2018.day04;
 
 public class Guard {
 

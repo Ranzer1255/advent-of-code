@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day4;
+package net.ranzer.aoc.y2018.day04;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Day4 {
+public class Day04 {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day4/input"));

@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day6;
+package net.ranzer.aoc.y2018.day06;
 
 import java.awt.*;
 import java.io.File;
@@ -7,15 +7,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Day6 {//not my code sadly i was stumped
+public class Day06 {//not my code sadly i was stumped
 
     public static void main(String[] args) throws FileNotFoundException {
-        new Day6();
+        new Day06();
     }
 
 
 
-    public Day6() throws FileNotFoundException {
+    public Day06() throws FileNotFoundException {
         //* Toggle comment - switch start of this line between /* and //* to toggle which section of code is active.
         Scanner file = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day6/input"));
 

@@ -1,8 +1,8 @@
-package net.ranzer.aoc.y2018.day9;
+package net.ranzer.aoc.y2018.day09;
 
 import java.util.Arrays;
 
-public class Day9 {
+public class Day09 {
     public static void main(String[] args) {
 
         int numPlayers = 493;

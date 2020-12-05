@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day9;
+package net.ranzer.aoc.y2018.day09;
 
 import java.util.ArrayDeque;
 

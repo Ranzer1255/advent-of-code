@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day2;
+package net.ranzer.aoc.y2018.day02;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Day2 {
+public class Day02 {
 
     public static void main(String[] args) throws FileNotFoundException {
 

@@ -1,10 +1,10 @@
-package net.ranzer.aoc.y2018.day7;
+package net.ranzer.aoc.y2018.day07;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class Day7 {
+public class Day07 {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day7/input"));

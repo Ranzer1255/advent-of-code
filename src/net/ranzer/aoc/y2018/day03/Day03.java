@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day3;
+package net.ranzer.aoc.y2018.day03;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day3 {
+public class Day03 {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/net.ranzer.aoc.y2018/day3/input"));

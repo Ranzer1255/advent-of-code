@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day6;
+package net.ranzer.aoc.y2018.day06;
 
 public class Loc {
     int x,y;

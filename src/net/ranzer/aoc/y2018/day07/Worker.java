@@ -1,4 +1,4 @@
-package net.ranzer.aoc.y2018.day7;
+package net.ranzer.aoc.y2018.day07;
 
 public class Worker {
 
