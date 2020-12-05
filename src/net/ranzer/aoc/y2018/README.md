@@ -15,7 +15,7 @@ Solutions for [AoC](https://adventofcode.com/2018) 2018
 |9|[Done](day09/Day09.java)|
 |10|[Done](day10/Day10.java)|
 |11|[Done](day11/Day11.java)|
-|12|[Done](day12/Day12.java)|
+|12|[Part 1](day12/Day12.java)|
 |13| |
 |14| |
 |15| |
