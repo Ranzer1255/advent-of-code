@@ -4,7 +4,7 @@ Solutions for [AoC](https://adventofcode.com/2020) 2020
 
 |Day|Done|
 |:---:|---|
-|1|[Done](src/net/ranzer/aoc/y2020/day01)|
+|1|[Done](day01/Day01.java)|
 |2| |
 |3| |
 |4| |
