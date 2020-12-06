@@ -24,8 +24,14 @@ public class Day05 extends Day {
 		while (input.hasNext()) {
 			int id = 0;
 			String line = input.nextLine();
+
+			//build binary one character at a time using above conversion table
 			for (int i = 0; i < line.length(); i++) {
+
+				//left shift the current number to make room for the next character
 				id = id << 1;
+
+				//if its a B or an R make the last digit a 1 in the binary
 				if (line.charAt(i) == 'B'||line.charAt(i)=='R') id++;
 			}
 			seatIDs.add(id);
@@ -35,16 +41,20 @@ public class Day05 extends Day {
 
 	@Override
 	public void part1() {
+
+		//output the highest number in the list
 		System.out.println(seatIDs.stream().max(Integer::compareTo).get());
 	}
 
 	@Override
 	public void part2() {
 
+		//sort the seatIDs
 		seatIDs.sort(Integer::compareTo);
 
-		seatIDs.forEach(System.out::println);
+//		seatIDs.forEach(System.out::println);
 
+		//print the seat ID that's missing
 		for (int i = 1; i < seatIDs.size()-1; i++) {
 			if ((seatIDs.get(i)-1)!=(seatIDs.get(i-1))) {
 				System.out.println(seatIDs.get(i)-1);
