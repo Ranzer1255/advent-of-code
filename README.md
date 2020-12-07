@@ -6,5 +6,5 @@
 |[2016](src/net/ranzer/aoc/y2016)|
 |[2017](old/y2017) (needs refactored into new style)|
 |[2018](src/net/ranzer/aoc/y2018)|
-|[2019](old/y2019) (needs refactored into new style)|
+|[2019](src/net/ranzer/aoc/y2019)|
 |[2020](src/net/ranzer/aoc/y2020)|
