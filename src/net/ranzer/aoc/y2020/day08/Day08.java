@@ -89,10 +89,13 @@ public class Day08 extends Day {
 			}
 		}
 
+		//safety net to CYA
 		if(!found) {
 			System.out.println("we didn't find one HCF!");
 			System.exit(-1);
 		}
+
+		//fixing the loop
 		System.out.println("fixing the loop");
 		loop:for (int i = 0; i < instructions.size(); i++) {
 			Instruction inst = instructions.get(i);
@@ -116,31 +119,31 @@ public class Day08 extends Day {
 			}
 		}
 
-//		int acc=0;
-//		int counter=0;
-//		while (true) {
-//			Instruction instruction = instructions.get(counter);
-//			System.out.printf("instruction %d: %s\n",counter,instructions.get(counter));
-//			switch (instruction.cmd) {
-//				case NOP:
-//					counter++;
-//					break;
-//				case ACC:
-//					counter++;
-//					acc += instruction.arg;
-//					break;
-//				case JMP:
-//					counter += instruction.arg;
-//					break;
-//				default:
-//					System.out.println("um WAT?!");
-//					System.exit(-1);
-//			}
-//			if (counter>=instructions.size()){
-//				break;
-//			}
-//		}
-//		System.out.println(acc);
+		int acc=0;
+		int counter=0;
+		while (true) {
+			Instruction instruction = instructions.get(counter);
+			System.out.printf("instruction %d: %s\n",counter,instructions.get(counter));
+			switch (instruction.cmd) {
+				case NOP:
+					counter++;
+					break;
+				case ACC:
+					counter++;
+					acc += instruction.arg;
+					break;
+				case JMP:
+					counter += instruction.arg;
+					break;
+				default:
+					System.out.println("um WAT?!");
+					System.exit(-1);
+			}
+			if (counter>=instructions.size()){
+				break;
+			}
+		}
+		System.out.println(acc);
 
 
 	}
