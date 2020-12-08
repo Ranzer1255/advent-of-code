@@ -12,9 +12,9 @@ public class Day02 extends Day {
 
 	private List<Package> packages = new ArrayList();
 	public Day02(){
-		input = Input.getScanner(2015,2);
-		while (input.hasNext()){
-			packages.add(new Package(input.nextLine()));
+		inputScanner = Input.getScanner(2015,2);
+		while (inputScanner.hasNext()){
+			packages.add(new Package(inputScanner.nextLine()));
 		}
 	}
 

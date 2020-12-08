@@ -19,11 +19,11 @@ public class Day05 extends Day {
 
 	public Day05() {
 
-		input = Input.getScanner(2020,5);
+		inputScanner = Input.getScanner(2020,5);
 
-		while (input.hasNext()) {
+		while (inputScanner.hasNext()) {
 			int id = 0;
-			String line = input.nextLine();
+			String line = inputScanner.nextLine();
 
 			//build binary one character at a time using above conversion table
 			for (int i = 0; i < line.length(); i++) {

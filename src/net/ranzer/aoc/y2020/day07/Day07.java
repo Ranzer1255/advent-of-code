@@ -15,10 +15,10 @@ public class Day07 extends Day {
 
 	public Day07() {
 
-		input = Input.getScanner(2020,7);
+		inputScanner = Input.getScanner(2020,7);
 
-		while (input.hasNext()){
-			String line = input.nextLine();
+		while (inputScanner.hasNext()){
+			String line = inputScanner.nextLine();
 			Matcher matcherContainer = containerPattern.matcher(line);
 			Matcher matcherContents = contentsPattern.matcher(line);
 

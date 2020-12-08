@@ -15,10 +15,10 @@ public class Day02 extends Day {
 	List<Password> passwords = new ArrayList<>();
 
 	public Day02() {
-		input = Input.getScanner(2020,2);
+		inputScanner = Input.getScanner(2020,2);
 
-		while(input.hasNext()){
-			Matcher m = parser.matcher(input.nextLine());
+		while(inputScanner.hasNext()){
+			Matcher m = parser.matcher(inputScanner.nextLine());
 
 			if(m.find()){
 				int  low  = Integer.parseInt(m.group("low"));

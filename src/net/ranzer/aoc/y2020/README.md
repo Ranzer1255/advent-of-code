@@ -11,7 +11,7 @@ Solutions for [AoC](https://adventofcode.com/2020) 2020
 |5|[Done](day05/Day05.java)|
 |6|[Done](day06/Day06.java)|
 |7|[Done](day07/Day07.java)|
-|8| |
+|8|[Part 1](day07/Day07.java) |
 |9| |
 |10| |
 |11| |

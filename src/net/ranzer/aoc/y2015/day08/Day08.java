@@ -12,9 +12,9 @@ public class Day08 extends Day {
 	List<String> encodedStrings;
 
 	public Day08() {
-		input = Input.getTestScanner(2015,8);
-		while (input.hasNext()){
-			rawStrings.add(input.nextLine());
+		inputScanner = Input.getTestScanner(2015,8);
+		while (inputScanner.hasNext()){
+			rawStrings.add(inputScanner.nextLine());
 		}
 
 		encodedStrings = encode(rawStrings);

@@ -14,7 +14,7 @@ public class Day06 extends Day {
 	private final List<String> instructions = new ArrayList<>();
 
 	public Day06() {
-		input = Input.getScanner(2015,6);
+		inputScanner = Input.getScanner(2015,6);
 
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[i].length; j++) {
@@ -22,10 +22,10 @@ public class Day06 extends Day {
 			}
 		}
 
-		while(input.hasNext()){
-			instructions.add(input.nextLine());
+		while(inputScanner.hasNext()){
+			instructions.add(inputScanner.nextLine());
 		}
-		input.close();
+		inputScanner.close();
 	}
 
 	@Override

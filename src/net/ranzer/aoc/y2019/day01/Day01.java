@@ -11,9 +11,9 @@ public class Day01 extends Day {
 	List<Integer> parts = new ArrayList<>();
 
 	public Day01() {
-		input = Input.getScanner(2019,1);
-		while (input.hasNext()){
-			parts.add(Integer.parseInt(input.nextLine()));
+		inputScanner = Input.getScanner(2019,1);
+		while (inputScanner.hasNext()){
+			parts.add(Integer.parseInt(inputScanner.nextLine()));
 		}
 	}
 

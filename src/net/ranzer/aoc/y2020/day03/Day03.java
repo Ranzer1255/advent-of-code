@@ -3,7 +3,6 @@ package net.ranzer.aoc.y2020.day03;
 import net.ranzer.aoc.framework.Day;
 import net.ranzer.aoc.framework.Input;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,10 +10,10 @@ public class Day03 extends Day {
 
 	List<List<Character>> slopes= new ArrayList<>();
 	public Day03() {
-		input = Input.getScanner(2020,3);
+		inputScanner = Input.getScanner(2020,3);
 
-		while(input.hasNext()){
-			String parse = input.nextLine();
+		while(inputScanner.hasNext()){
+			String parse = inputScanner.nextLine();
 			ArrayList<Character> line = new ArrayList<>();
 			for (int i = 0; i < parse.length(); i++) {
 				line.add(parse.charAt(i));

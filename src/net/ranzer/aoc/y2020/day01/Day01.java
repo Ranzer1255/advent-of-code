@@ -11,10 +11,10 @@ public class Day01 extends Day {
 	List<Integer> expenses = new ArrayList<>();
 
 	public Day01(){
-		input = Input.getScanner(2020,1);
+		inputScanner = Input.getScanner(2020,1);
 
-		while (input.hasNext()){
-			expenses.add(input.nextInt());
+		while (inputScanner.hasNext()){
+			expenses.add(inputScanner.nextInt());
 		}
 	}
 

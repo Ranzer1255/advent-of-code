@@ -13,11 +13,11 @@ public class Day04 extends Day {
 	List<Passport> passports = new ArrayList<>();
 
 	public Day04() {
-		input = Input.getScanner(2020,4);
+		inputScanner = Input.getScanner(2020,4);
 
 		StringBuilder passportString = new StringBuilder();
-		while (input.hasNext()){
-			String s = input.nextLine();
+		while (inputScanner.hasNext()){
+			String s = inputScanner.nextLine();
 			if(s.equals("")){
 				passports.add(parsePassport(passportString.toString()));
 				passportString = new StringBuilder();

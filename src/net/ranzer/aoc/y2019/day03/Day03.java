@@ -14,7 +14,7 @@ public class Day03 extends Day { //TODO my brain isn't firing on enough cylinder
 	List<Loc> intersections = new ArrayList<>();
 
 	public Day03() {
-		input = Input.getTestScanner(2019,3);
+		inputScanner = Input.getTestScanner(2019,3);
 	}
 
 	@Override

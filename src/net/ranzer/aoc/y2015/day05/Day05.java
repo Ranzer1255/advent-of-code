@@ -16,8 +16,8 @@ public class Day05 extends Day {
 	List<String> banned = Arrays.asList("ab","cd","pq","xy");
 
 		public Day05(){
-		input = Input.getScanner(2015,5);
-		while (input.hasNext()) list.add(input.nextLine());
+		inputScanner = Input.getScanner(2015,5);
+		while (inputScanner.hasNext()) list.add(inputScanner.nextLine());
 	}
 
 	@Override

@@ -8,8 +8,8 @@ public class Day01 extends Day {
 	private String instructions;
 
 	public Day01() {
-		input = Input.getScanner(2015,1);
-		instructions = input.nextLine();
+		inputScanner = Input.getScanner(2015,1);
+		instructions = inputScanner.nextLine();
 	}
 
 	@Override

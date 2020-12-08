@@ -14,8 +14,8 @@ public class Day03 extends Day {
 	public Day03(){
 		examples.add("^v^v^v^v^v");
 		examples.add("^>v<");
-		input = Input.getScanner(2015,3);
-		instructions = input.nextLine();
+		inputScanner = Input.getScanner(2015,3);
+		instructions = inputScanner.nextLine();
 //		instructions = examples.get(1);
 	}
 

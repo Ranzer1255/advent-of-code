@@ -3,7 +3,6 @@ package net.ranzer.aoc.y2019.day02;
 import net.ranzer.aoc.framework.Day;
 import net.ranzer.aoc.framework.Input;
 
-import javax.tools.OptionChecker;
 import java.util.ArrayList;
 
 public class Day02 extends Day {
@@ -11,14 +10,14 @@ public class Day02 extends Day {
 	ArrayList<Integer> memory;
 
 	public Day02() {
-		input = Input.getScanner(2019,2);
-		input.useDelimiter(",");
+		inputScanner = Input.getScanner(2019,2);
+		inputScanner.useDelimiter(",");
 
 		initState = new ArrayList<>();
-		while (input.hasNext()){
-			initState.add(input.nextInt());
+		while (inputScanner.hasNext()){
+			initState.add(inputScanner.nextInt());
 		}
-		input.close();
+		inputScanner.close();
 	}
 
 	private void initialize() {

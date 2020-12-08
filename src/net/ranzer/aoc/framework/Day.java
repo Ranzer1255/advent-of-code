@@ -9,7 +9,7 @@ public abstract class Day {
 
 	protected File input_file;
 	protected List<String> examples = new ArrayList<>();
-	protected Scanner input;
+	protected Scanner inputScanner;
 
 
 	public abstract void part1();

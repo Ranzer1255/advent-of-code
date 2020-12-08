@@ -12,12 +12,12 @@ public class Day06 extends Day {
 
 
 	public Day06() {
-		input = Input.getScanner(2020,6);
+		inputScanner = Input.getScanner(2020,6);
 
 		List<String> groupStrings = new ArrayList<>();
 		StringBuilder groupString = new StringBuilder();
-		while (input.hasNext()){
-			String s = input.nextLine();
+		while (inputScanner.hasNext()){
+			String s = inputScanner.nextLine();
 			if(s.equals("")){
 				groupStrings.add(groupString.substring(1));
 				groupString = new StringBuilder();
