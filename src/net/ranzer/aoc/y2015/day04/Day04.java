@@ -42,10 +42,10 @@ public class Day04 extends Day {
 		while(!found){
 			tryIndex++;
 			String test = input+tryIndex;
-			System.out.println("try number: "+tryIndex);
+//			System.out.println("try number: "+tryIndex);
 			md.update(test.getBytes(StandardCharsets.UTF_8));
 			byte[] hash = md.digest();
-			System.out.println(Hex.bytesToHex(hash));
+//			System.out.println(Hex.bytesToHex(hash));
 			found=foundHash(hash,5);
 		}
 		System.out.println(tryIndex);
@@ -65,7 +65,7 @@ public class Day04 extends Day {
 		while(!found){
 			tryIndex++;
 			String test = input+tryIndex;
-			System.out.println("try number: "+tryIndex);
+//			System.out.println("try number: "+tryIndex);
 			md.update(test.getBytes(StandardCharsets.UTF_8));
 			byte[] hash = md.digest();
 			found=foundHash(hash,6);
