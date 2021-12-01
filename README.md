@@ -8,3 +8,4 @@
 |[2018](src/net/ranzer/aoc/y2018)|
 |[2019](src/net/ranzer/aoc/y2019)|
 |[2020](src/net/ranzer/aoc/y2020)|
+|[2021](src/net/ranzer/aoc/y2021)|
