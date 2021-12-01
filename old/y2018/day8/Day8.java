@@ -7,7 +7,7 @@ import java.util.*;
 public class Day8 {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day8/input"));
-//        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day8/testInput.txt"));
+//        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day8/testInput"));
         input.useDelimiter(" ");
 
         List<Integer> inputStream = new ArrayList<>();

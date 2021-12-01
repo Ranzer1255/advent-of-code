@@ -107,7 +107,7 @@ public class Day10 {
         List<Light> rtn = new ArrayList<>();
 
         Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day10/input"));
-//        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day10/testInput.txt"));
+//        Scanner input = new Scanner(new File("C:/Users/jrdillingham/IdeaProjects/advent-of-code/src/y2018/day10/testInput"));
 
         Pattern p = Pattern.compile("-*\\d+");
 

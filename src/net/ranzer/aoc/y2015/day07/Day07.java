@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public class Day07 {
 
 	private static final File inputFile = new File("./src/net/ranzer/aoc/y2015/day07/input");
-	private static final File testInput = new File("./src/net/ranzer/aoc/y2015/day07/testInput.txt");
+	private static final File testInput = new File("./src/net/ranzer/aoc/y2015/day07/testInput");
 
 	private static final Map<String, Wire> wires = new HashMap<>();
 
