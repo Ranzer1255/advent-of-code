@@ -1,6 +1,6 @@
 # advent of Code 2020
 
-Solutions for [AoC](https://adventofcode.com/2021) 2020
+Solutions for [AoC](https://adventofcode.com/2021) 2021
 
 |Day|Done|
 |:---:|---|
