@@ -1,4 +1,4 @@
-# advent of Code 2020
+# advent of Code 2021
 
 Solutions for [AoC](https://adventofcode.com/2021) 2021
 
