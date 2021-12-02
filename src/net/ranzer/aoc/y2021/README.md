@@ -5,7 +5,7 @@ Solutions for [AoC](https://adventofcode.com/2021) 2021
 |Day|Done|
 |:---:|---|
 |1|[Done](day01/Day01.java)|
-|2|[Done](day02/Day02.java) |
+|2|[Done](day02/Sub.java) |
 |3| |
 |4| |
 |5| |
