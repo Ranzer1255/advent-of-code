@@ -60,4 +60,9 @@ public class Loc {
 	public int hashCode() {
 		return Objects.hash(X, Y);
 	}
+
+	@Override
+	public String toString() {
+		return X + "," +Y;
+	}
 }
