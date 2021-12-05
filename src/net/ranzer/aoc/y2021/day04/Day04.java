@@ -24,7 +24,7 @@ public class Day04 extends Day {
 		loop:for (Integer v: moves){
 			for (BingoBoard b: boards){
 				if (b.mark(v)) {
-					System.out.println(b.score());
+					System.out.printf("Part 1: First win Bard score: %d\n",b.score(v));
 					break loop;
 				}
 			}
@@ -34,11 +34,32 @@ public class Day04 extends Day {
 
 	@Override
 	public void part2() {
+		reset();
 
+		BingoBoard lastWinningBoard=null;
+		int lastWinningMove = -1;
+		for(int v: moves){
+			for (BingoBoard b:boards){
+				//this line fixed my issue, but i'm not sure why it's needed....
+				//it *shouldn't* be processing finished boards as they are supposed to be getting removed
+				if(b.isFinished()) continue;
+				if (b.mark(v))	{
+					lastWinningBoard = b;
+					lastWinningMove = v;
+					System.out.printf(
+							"Boards size :%d\nwinning call: %d\nScore: %d\nBoard state:\n%s",
+							boards.size(),v,b.score(v),b);
+				}
+			}
+			if(lastWinningBoard!=null)	{
+				boards.remove(lastWinningBoard);
+			}
+		}
+		System.out.println(lastWinningBoard.score(lastWinningMove));
 	}
 
 	public void reset(){
-		Scanner input = Input.getTestScanner(2021,4);
+		Scanner input = Input.getScanner(2021,4);
 		moves = new ArrayList<>();
 		boards = new ArrayList<>();
 

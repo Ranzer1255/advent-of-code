@@ -2,6 +2,7 @@ package net.ranzer.aoc.y2021.day04;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class BingoBoard {
 
@@ -31,16 +32,14 @@ public class BingoBoard {
 		return false;
 	}
 
-	public int score(){
+	public int score(int value){
 		int unmarked=0;
-		int marked=0;
 
 		for (Cell c: grid){
-			if(c.isMarked()) marked+=c.value;
-			else             unmarked+=c.value;
+			if(!c.isMarked()) unmarked+=c.value;
 		}
 
-		return marked*unmarked;
+		return value*unmarked;
 	}
 
 	private boolean checkMarked(List<Cell> set) {
@@ -84,5 +83,48 @@ public class BingoBoard {
 		public boolean isMarked(){
 			return marked;
 		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			Cell cell = (Cell) o;
+			return value == cell.value;
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(value);
+		}
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder rtn = new StringBuilder();
+
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				Cell c = grid.get(j+i*5);
+				rtn.append(c.value).append(c.marked?"*":" ");
+				if (c.value<10) rtn.append(" ");
+				rtn.append(" ");
+			}
+			rtn.append("\n");
+		}
+
+		return rtn.toString();
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		BingoBoard that = (BingoBoard) o;
+		return Objects.equals(grid, that.grid);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(grid);
 	}
 }
