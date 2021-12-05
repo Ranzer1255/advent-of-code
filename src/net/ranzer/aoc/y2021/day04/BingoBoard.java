@@ -1,24 +1,37 @@
 package net.ranzer.aoc.y2021.day04;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BingoBoard {
 
 	ArrayList<Cell> grid = new ArrayList<>(25);
 
-	public BingoBoard(){
+	public BingoBoard(ArrayList<Integer> values){
+		for (int v : values) {
+			grid.add(new Cell(v));
+		}
+	}
 
+	public boolean mark(int value){
+		for (Cell c : grid) {
+			if (c.value == value) {
+				c.mark();
+				return isFinished();
+			}
+		}
+		return false;
 	}
 
 	public boolean isFinished(){
 		for (int i = 0; i < 5; i++) {
-			if(checkUnmarked(getRow(i))) return false;
-			if(checkUnmarked(getCol(i))) return false;
+			if(checkMarked(getRow(i))) return true;
+			if(checkMarked(getCol(i))) return true;
 		}
-		return true;
+		return false;
 	}
 
-	public int Score(){
+	public int score(){
 		int unmarked=0;
 		int marked=0;
 
@@ -30,20 +43,20 @@ public class BingoBoard {
 		return marked*unmarked;
 	}
 
-	private boolean checkUnmarked(ArrayList<Cell> set) {
+	private boolean checkMarked(List<Cell> set) {
 		for (Cell c:set){
 			if(!c.isMarked()){
-				return true;
+				return false;
 			}
 		}
-		return false;
+		return true;
 	}
 
-	private ArrayList<Cell> getRow(int index){
-		return (ArrayList<Cell>)grid.subList(index*5,index*5+5);
+	private List<Cell> getRow(int index){
+		return grid.subList(index*5,index*5+5);
 	}
 
-	private ArrayList<Cell> getCol(int index){
+	private List<Cell> getCol(int index){
 		ArrayList<Cell> rtn = new ArrayList<>();
 
 		rtn.add(grid.get(index));
