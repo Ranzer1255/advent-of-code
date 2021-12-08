@@ -1,6 +1,6 @@
 package net.ranzer.aoc.framework;
 
-import net.ranzer.aoc.y2021.day05.Day05;
+import net.ranzer.aoc.y2021.day06.Day06;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ public class Runner {
 	public static void main(String[] args) {
 
 		Date startTime = new Date();
-		Day testDay = new Day05();
+		Day testDay = new Day06();
 
 
 
